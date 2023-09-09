@@ -13,16 +13,12 @@ public class Employee {
 	private int id;
 	
 	private String  name, email, password, address, gender;
-	
-	public Employee(int id, String email, String password, String name, String address, String gender) {
-		super();
-		this.id = id;
-		this.email = email;
-		this.password = password;
-		this.name = name;
-		this.address = address;
-		this.gender = gender;
-	}
+	/*
+	 * public Employee(int id, String email, String password, String name, String
+	 * address, String gender) { super(); this.id = id; this.email = email;
+	 * this.password = password; this.name = name; this.address = address;
+	 * this.gender = gender; }
+	 */
 	
 	public int getId() {
 		return id;
@@ -66,6 +62,4 @@ public class Employee {
 		return "Employee [id=" + id + ", email=" + email + ", password=" + password + ", name=" + name + ", address="
 				+ address + ", gender=" + gender + "]";
 	}
-	
-	
 }
