@@ -33,9 +33,9 @@ public class HomeController {
 
 	@GetMapping("/edit/{id}")
 	public String editEmp(@PathVariable int id, Model m) {
-	    Employee emp = empService.getEmpById(id);
-	    m.addAttribute("emp", emp);
-	    return "edit"; // Make sure this matches the name of your HTML file.
+		Employee emp = empService.getEmpById(id);
+		m.addAttribute("emp", emp);
+		return "edit"; // Make sure this matches the name of your HTML file.
 	}
 
 	@PostMapping("/saveEmp")
@@ -67,4 +67,16 @@ public class HomeController {
 
 		return "redirect:/";
 	}
+
+	@GetMapping("/deleteEmp/{id}")
+	public String loadEmpSave(@PathVariable int id, HttpSession session) {
+		boolean f = empService.deleteEmp(id);
+		if (f) {
+			session.setAttribute("msg", "Delete sucessfully");
+		} else {
+			session.setAttribute("msg", "something wrong on server");
+		}
+		return "redirect:/";
+	}
+
 }
