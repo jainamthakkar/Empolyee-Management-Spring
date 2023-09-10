@@ -1,15 +1,15 @@
 package com.example.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.*;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entity.Employee;
 import com.example.demo.service.EmpService;
-import com.example.demo.service.EmpServiceImpl;
-
 import jakarta.servlet.http.HttpSession;
 
 @Controller
@@ -19,7 +19,9 @@ public class HomeController{
 	private EmpService empService;
 	
 	@GetMapping("/") 
-	public String index() {
+	public String index(Model m) {
+		List<Employee> list = empService.getAllEmp();
+		m.addAttribute("empList", list);
 		return "index";
 	}
 	
