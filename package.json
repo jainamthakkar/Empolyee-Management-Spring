@@ -1,0 +1,15 @@
+{
+  "name": "learning",
+  "version": "1.0.0",
+  "description": "A web-based Employee Management application built using Spring Boot, Spring Data JPA, Thymeleaf, HTML, and Tailwind CSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

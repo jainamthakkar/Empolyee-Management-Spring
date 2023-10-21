@@ -35,12 +35,11 @@ public class HomeController {
 	public String editEmp(@PathVariable int id, Model m) {
 		Employee emp = empService.getEmpById(id);
 		m.addAttribute("emp", emp);
-		return "edit"; // Make sure this matches the name of your HTML file.
+		return "edit"; 
 	}
 
 	@PostMapping("/saveEmp")
 	public String saveEmp(@ModelAttribute Employee emp, HttpSession session) {
-		/* System.out.println(emp); */
 		Employee newemp = empService.saveEmp(emp);
 		if (newemp != null) {
 			System.out.println("success");
@@ -64,7 +63,6 @@ public class HomeController {
 			// System.out.println("something wrong on server");
 			session.setAttribute("msg", "something wrong on server");
 		}
-
 		return "redirect:/";
 	}
 
