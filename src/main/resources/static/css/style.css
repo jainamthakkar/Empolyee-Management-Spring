@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    /* font-family: 'monospace';
+    background-color: red;
+    border: 5px solid red; */
+}
+
+section{
+	display: marker;
+}

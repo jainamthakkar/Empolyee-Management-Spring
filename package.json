@@ -4,13 +4,14 @@
   "description": "A web-based Employee Management application built using Spring Boot, Spring Data JPA, Thymeleaf, HTML, and Tailwind CSS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tailwindcss -i ./src/main/resources/static/css/style.css -o ./src/main/resources/static/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browserslist": "^4.22.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3"
   }
 }
